@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emoji Display</title>
+<title>Emoji Buzz Effect</title>
 <style>
   body, html {
     height: 100%;
@@ -11,12 +11,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 10vw; /* Adjust emoji size */
+    font-size: 10vw; /* Adjust size of the emoji */
+  }
+  a {
+    text-decoration: none;
+    color: inherit; /* Keeps the emoji color */
+    animation: buzz 0.5s infinite;
+  }
+  @keyframes buzz {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    50% { transform: translateX(5px) rotate(5deg); }
+    75% { transform: translateX(-5px) rotate(-5deg); }
+    100% { transform: translateX(5px) rotate(5deg); }
   }
 </style>
 </head>
 <body>
-<div>❤️</div>
+
+<a href="https://t.me/katya_love" target="_blank">❤️</a>
+
 </body>
 </html>
-
